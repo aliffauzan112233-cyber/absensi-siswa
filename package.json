@@ -17,6 +17,8 @@
   },
   "dependencies": {
     "dotenv": "^17.4.2",
-    "drizzle-orm": "^0.45.2"
+    "drizzle-orm": "^0.45.2",
+    "pg": "^8.20.0",
+    "postgres": "^3.4.9"
   }
 }
