@@ -2,7 +2,7 @@ import { pgTable, serial, text, boolean, timestamp, integer } from "drizzle-orm/
 
 // Table users
 export const users = pgTable("users", {
-    id: serial("id").primarykey(),
+    id: serial("id").primaryKey(),
 
     name: text("name").notNull(),
 
