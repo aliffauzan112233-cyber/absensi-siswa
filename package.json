@@ -7,7 +7,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "db:generate": "drizzle-kit generate",
-    "db:migrate": "drizzle-kit migrate"
+    "db:migrate": "drizzle-kit migrate",
+    "db:seed": "node db/seed.js",
+    "dev": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -16,8 +18,11 @@
     "drizzle-kit": "^0.31.10"
   },
   "dependencies": {
+    "@hono/node-server": "^2.0.2",
+    "bcryptjs": "^3.0.3",
     "dotenv": "^17.4.2",
     "drizzle-orm": "^0.45.2",
+    "hono": "^4.12.18",
     "pg": "^8.20.0",
     "postgres": "^3.4.9"
   }
