@@ -14,6 +14,7 @@ auth.post('/login', async (c) => {
     try {
         const body = await c.req.json();
         const { email, password } = body;
+        console.log(email);
 
         if (!email || !password) {
             return c.json(
