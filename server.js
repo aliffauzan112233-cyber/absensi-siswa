@@ -1,21 +1,10 @@
-import { serve } from "@hono/node-server";
 import { Hono } from "hono";
+import { serve } from "@hono/node-server";
+import { auth } from "./api/auth.js";
 
 const app = new Hono();
 
-app.get("/", (c) => {
-    return c.text("Hello World");
-});
-
-app.get("/about", (c) => {
-    return c.text("Ini halaman about");
-});
-
-app.get("/", (c) => {
-    return c.json({
-        message: "API berjalan",
-    });
-});
+app.route("/auth", auth);
 
 serve({
     fetch: app.fetch,
