@@ -9,7 +9,7 @@ import { createToken, verifyToken } from '../lib/jwt.js';
 const auth = new Hono();
 
 
-// ================= LOGIN =================
+// LOGIN 
 auth.post('/login', async (c) => {
     try {
         const body = await c.req.json();
